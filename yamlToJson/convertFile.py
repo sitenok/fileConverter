@@ -7,20 +7,29 @@ import json
 filein = sys.argv[1]
 fileout = sys.argv[2]
 
-print ("You would like to convert ", filein)
-print ("n", fileout)
+if( ( filein.endswith('.yml') ) or ( filein.endswith('.yaml') )):
+    print ("\nYou would like to convert", filein, end=' ')
+    print ("to", fileout, "\n\n")
+    print ("YAML file to JSON file.\n\n")
+
+if( ( filein.endswith('.jsn') ) or ( filein.endswith('.json') )):
+    print ("\nYou would like to convert", filein, end=' ')
+    print ("to", fileout)
+    print ("JSON file to YAML file.\n\n")
 
 
 # List to hold the data from file
 data = {}
 
-# Read the YAML file & load to data list
-with open("c:\temp\operating-systems.yml") as infile:
-    data = yaml.load(infile, Loader=yaml.FullLoader)     
-    print(data)
+def create_yaml():
+    # Read the YAML file & load to data list
+    with open(filein) as infile:
+        data = yaml.safe_load(infile, Loader=yaml.FullLoader)     
+        print(data)
 
-#Open a file to write the JSON output. The 'w' makes the file writable
-with open("c:\temp\python_operating-systems.json", 'w') as outfile:
-    json.dump(data, outfile, indent=4) 
-    print("JSON file written.")
+    #Open a file to write the JSON output. The 'w' makes the file writable
+    with open(fileout, 'w') as outfile:
+        json.dump(data, outfile, indent=4) 
+        print("JSON file written.")
+
 
