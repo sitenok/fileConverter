@@ -14,7 +14,7 @@ In terminal run the following commands:
 
 1.  **git clone git@github.com:sitenok/ospProjects/yamlToJson**
 
-    *enter directory after clone using cd/path
+    *enter directory after clone using cd /path/
     
     
 2.  **pip install pyyaml**
