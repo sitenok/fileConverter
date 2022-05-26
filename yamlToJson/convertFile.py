@@ -24,15 +24,26 @@ def create_yaml():
 
 # YAML >> JSON
 if( ( filein.endswith('.yml') ) or ( filein.endswith('.yaml') )):
-    print ("\nYou would like to convert", filein, "to", fileout, "\n")
-    print ("YAML file to JSON file.\n\n")
-    create_json()
+    print ("\nYou would like to convert", filein, "to", fileout, "?\n")
+    print ("YAML file to JSON file.\n")
+    ans = input("Y or N: ")
+    if( ans == ('y' or 'Y') ):
+        create_json()
+    else:
+        print("Goodbye")
+        exit
 
 # JSON >> YAML
 if( ( filein.endswith('.jsn') ) or ( filein.endswith('.json') )):
     print ("\nYou would like to convert", filein, end=' ')
     print ("to", fileout)
-    print ("JSON file to YAML file.\n\n")
-    create_yaml()
+    print ("JSON file to YAML file.\n")
+    ans = str(input("Y or N: "))
+    print (ans)
+    if( ans == ('y' or 'Y') ):
+        create_yaml()
+    else:
+        print("Goodbye")
+        exit
 
 
