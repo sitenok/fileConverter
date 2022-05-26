@@ -1,0 +1,18 @@
+def create_json():
+    # Read the JSON file & load to data list
+    with open(filein) as infile:
+        data = yaml.safe_load(infile, Loader=yaml.FullLoader)     
+        print(data)
+
+    #Open a file to write the JSON output. The 'w' makes the file writable
+    with open(fileout, 'w') as outfile:
+        json.dump(data, outfile, indent=3) 
+        print("JSON file written.") 
+        
+        
+        
+        
+        
+        
+        
+sudo apt install python3-pip
