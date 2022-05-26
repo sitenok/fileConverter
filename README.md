@@ -17,15 +17,18 @@ In terminal run the following **commands**:
     **git init**
     
     
+    
 2.  **git clone https://github.com/sitenok/fileConverter**
 
     *enter directory after clone using **cd fileConverter**
+    
     
     
 3.  **pip install pyyaml**
 
     *if pip (a package installer) is not installed; ( pip command not recognized ) error
      run "get-pip.py" file included in repository
+
 
 
 4.  **python3 convertFile.py <input_file.ext> <output_file.ext>**
