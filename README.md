@@ -1,12 +1,26 @@
 File Converter Program
 ======================
-
 A program which converts YAML files to JSON file types and vice versa. 
-Implemented with Python3.
 
-Download image which must be built and run with:
 
-1.  docker --file converter build -t/converter .
+Environment
+===========
+Python 3.8.10
 
-2.  docker run -d -p 12000:22
+
+Usage
+=====
+In terminal run the following commands:
+
+1.  **git clone git@github.com:sitenok/ospProjects/yamlToJson**
+    *enter directory after clone using cd/path
+    
+    
+2.  **pip install pyyaml**
+    *if pip (a package installer) is not installed; ( pip command not recognized ) error
+     run "get-pip.py" file included in repository
+
+
+3.  **python3 convertFile.py <input_file.ext> <output_file.ext>**
+    
 
