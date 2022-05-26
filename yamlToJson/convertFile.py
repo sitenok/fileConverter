@@ -7,27 +7,26 @@ import json
 filein = sys.argv[1]
 fileout = sys.argv[2]
 
-# List to hold the data from file
-data = {}
-
+# Function to convert YAML file to JSON file
+def create_json():
+    with open(filein, 'r') as yaml_in, open(fileout, "w") as json_out:
+        yaml_data = yaml.safe_load(yaml_in)
+        json.dump(yaml_data, json_out)
+    print ("JSON file written.\n")
+    
 # Function to convert JSON file to YAML file
 def create_yaml():
-    # Read the YAML file & load to data list
-    with open(filein) as infile:
-        data = yaml.load(infile, Loader=yaml.FullLoader)     
-        print(data)
-
-    #Open a file to write the JSON output. The 'w' makes the file writable
-    with open(fileout, 'w') as outfile:
-        json.dump(data, outfile, indent=4) 
-        print("JSON file written.")
-
+    with open(filein, 'r') as json_in, open(fileout, "w") as yaml_out:
+        json_data = json.load(json_in)
+        yaml.dump(json_data, yaml_out, sort_keys=False)
+    print ("YAML file written.")
+    
 
 # YAML >> JSON
 if( ( filein.endswith('.yml') ) or ( filein.endswith('.yaml') )):
-    print ("\nYou would like to convert", filein, end=' ')
-    print ("to", fileout, "\n\n")
+    print ("\nYou would like to convert", filein, "to", fileout, "\n")
     print ("YAML file to JSON file.\n\n")
+    create_json()
 
 # JSON >> YAML
 if( ( filein.endswith('.jsn') ) or ( filein.endswith('.json') )):
