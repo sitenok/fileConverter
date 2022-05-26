@@ -26,7 +26,7 @@ In terminal run the following **commands**:
     
 3.  **pip install pyyaml**
 
-    *if pip (a package installer) is not installed; ( pip command not recognized ) error
+    *if pip (a package installer) is not installed; ( pip command not recognized ) error; 
      run "get-pip.py" file included in repository
 
 
