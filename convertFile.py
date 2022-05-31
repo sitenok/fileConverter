@@ -7,6 +7,11 @@ import json
 filein = sys.argv[1]
 fileout = sys.argv[2]
 
+if(argc != 2){
+    printf("Usage: filein.ext fileout.ext\n");
+    exit(1);
+}
+
 # Function to convert YAML file to JSON file
 def create_json():
     with open(filein, 'r') as yaml_in, open(fileout, "w") as json_out:
