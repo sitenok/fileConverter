@@ -7,10 +7,9 @@ import json
 filein = sys.argv[1]
 fileout = sys.argv[2]
 
-if(argc != 2){
-    printf("Usage: filein.ext fileout.ext\n");
-    exit(1);
-}
+if( argc != 2 ):
+    print ("Usage: filein.ext fileout.ext\n")
+    exit
 
 # Function to convert YAML file to JSON file
 def create_json():
