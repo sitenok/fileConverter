@@ -7,8 +7,8 @@ import json
 filein = sys.argv[1]
 fileout = sys.argv[2]
 
-if( argc != 2 ):
-    print ("Usage: filein.ext fileout.ext\n")
+if( argc != 3 ):
+    print ("Usage: convertFile.py filein.ext fileout.ext\n")
     exit
 
 # Function to convert YAML file to JSON file
